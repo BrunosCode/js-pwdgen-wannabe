@@ -16,32 +16,39 @@ main {
 }
 
 .container {
+    flex-grow: 1;
     background-color: aliceblue;
-    width: 98%;
-    height: 98%;
-    padding: 4rem;
-    border-radius: 3rem;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     text-align: center;
 }
-
 .form {
-    margin: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "label input"
-    "label input"
-    "label input"
-    "button button";
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 1rem .5rem;
+}
+@media screen and (min-width: 500px) {
+    .form {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "label input"
+        "label input"
+        "label input"
+        "button button";
+        margin: 1rem 1rem;
+    }
 }
 label {
     display: block;
-    margin: 1rem 0;
+    margin: .5rem 0;
     font-weight: 700;
     justify-self: flex-start;
 }
@@ -49,7 +56,7 @@ input {
     border: none;
     border-bottom: 2px solid darkcyan;
     border-radius: 1rem;
-    padding: 0 1rem;
+    padding: .5rem 1rem;
     margin: .5rem 0;
     text-align: center;
 }
@@ -74,7 +81,7 @@ button {
 
 #serius-generator {
     opacity: 0;
-    margin: 1rem 2rem;
+    margin: 1rem .5rem;
     transition: 1s;
     padding: 1rem;
     background-color: white;

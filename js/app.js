@@ -38,7 +38,7 @@ const generatePassword = () => {
     // 7. add numbers and simbols to the previus password
     let passwordCaracters = stupidPassword + "0123456789!£$%&/()=?^*";
     // 8. run untill reaching the choose number 
-    while (seriusPassword.length < 30) {
+    while (seriusPassword.length < 20) {
         // 9. random number different for every loop
         let random = Math.floor(Math.random() * passwordCaracters.length);
         seriusPassword += passwordCaracters.slice(random - 1, random);
