@@ -17,6 +17,55 @@ main {
 
 .container {
     background-color: aliceblue;
-    margin: 10%;
+    width: 98%;
+    height: 98%;
     padding: 4rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.form {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "label input"
+    "label input"
+    "label input"
+    "button button";
+}
+label {
+    display: block;
+    margin: 1rem 0;
+    font-weight: 700;
+    justify-self: flex-start;
+}
+input {
+    border: none;
+    border-bottom: 2px solid darkcyan;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    margin: .5rem 0;
+    text-align: center;
+}
+
+button {
+    padding: .5rem 1rem;
+    margin: 1rem 1rem 0;
+    border-radius: 1rem;
+    grid-area: button;
+    background-color: darkcyan;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+}
+
+#password {
+    color: darkcyan;
 }
