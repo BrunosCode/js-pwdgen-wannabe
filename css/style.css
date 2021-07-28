@@ -64,8 +64,31 @@ button {
     font-weight: 700;
     text-transform: uppercase;
     border: none;
+    cursor: pointer;
 }
 
-#password {
+#password,
+#serius-password {
     color: darkcyan;
 }
+
+#serius-generator {
+    opacity: 0;
+    margin: 1rem 2rem;
+    transition: 1s;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+#serius-advice {
+    margin: 1rem 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+#serius-generator.show, 
+#serius-advice.show {
+    opacity: 1;
+}
+
