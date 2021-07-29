@@ -5,13 +5,16 @@
     margin: 0;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 main {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-content: center;
-
     background-color: black;
 }
 
@@ -60,24 +63,22 @@ input {
     margin: .5rem 0;
     text-align: center;
 }
-
 button {
+    grid-area: button;
     padding: .5rem 1rem;
     margin: 1rem auto 0;
     border-radius: 1rem;
+    border: none;
     width: 100%;
     max-width: 300px;
-    grid-area: button;
     background-color: darkcyan;
     color: white;
     font-weight: 700;
     text-transform: uppercase;
-    border: none;
     cursor: pointer;
 }
 
-#password,
-#serius-password {
+.password {
     color: darkcyan;
 }
 
@@ -89,13 +90,11 @@ button {
     background-color: white;
     border-radius: 2rem;
 }
-
 #serius-advice {
     margin: 1rem 0;
     opacity: 0;
     transition: 1s;
 }
-
 #serius-generator.show, 
 #serius-advice.show {
     opacity: 1;

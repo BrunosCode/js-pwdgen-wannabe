@@ -1,25 +1,4 @@
 // PASSWROD GENERATOR APP
-
-// // SERIUS PASSWORD GENERATOR
-// const seriusGenerator = () => {
-//     // 9. diclare serius password variable and function
-//     let seriusPassword = "";
-//     // 10. add numbers and simbols to the previus password
-//     let passwordCaracters = stupidPassword + "0123456789!£$%&/()=?^*";
-//     console.log(passwordCaracters)
-//     // 11. run untill reaching the choose number 
-//     while (seriusPassword.length < 20) {
-//         // 12. random number different for every loop
-//         let random = Math.floor(Math.random() * passwordCaracters.length);
-//         console.log(random)
-//         seriusPassword += passwordCaracters.slice(random - 1, random);
-//         console.log(seriusPassword);
-//     }
-//     return seriusPassword;
-// }
-
-
-
 const generatePassword = () => {
     // 1. get user name and store in a string variable
     let userName = document.getElementById('user-name').value;
@@ -52,6 +31,7 @@ const generatePassword = () => {
     // 12. show serius advice after some more second
     setTimeout( () => {
         document.getElementById('serius-advice').classList.add('show');
+        document.getElementById('password').classList.remove('password');
     }, 5000);
 }
 
